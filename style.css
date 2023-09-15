@@ -1,0 +1,148 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.container{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+header{
+    background-color: rgb(111, 49, 49);
+    border-bottom: 4px solid rgb(57, 32, 32);
+    color: rgb(199, 199, 199);
+    padding: 16px;
+}
+
+.itensMenu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style-type: none;
+}
+
+.itensMenu li a{
+    text-decoration: none;
+    color: rgb(199, 199, 199);
+    margin: 0 8px;
+}
+
+#sobre{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 36px 0;
+}
+
+#sobre img{
+    max-height: 359px;
+    max-width: 480px;
+}
+
+.sobreTexto{
+    flex-direction: column;
+    padding-left: 16px;
+}
+
+h2{
+    border-bottom: 2px solid rgb(57, 32, 32);
+}
+
+.itens{
+    display: grid;
+    grid-template-columns: 24.5% 24.5% 24.5% 24.5%;
+    column-gap: 1%;
+    row-gap: 5%;
+}
+
+.itens img{
+    width: 100%;
+    margin-top: 16px;
+}
+
+.itens li{
+    list-style-type: none;
+    margin-top: 8px;
+}
+
+.itens li a{
+    text-decoration: none;
+    background-color:rgb(46, 83, 38);
+    color: white;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+.itens li p{
+    margin: 8px 0;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container{
+        max-width: 90%;
+    }
+
+    #sobre{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    h2{
+        padding: 24px 0;
+        margin: 16px 0;
+    }
+
+    .sobreTexto{
+        padding-left: 0;
+    }
+
+    .itens{
+        grid-template-columns: 49% 49%;
+        column-gap: 1%;
+        row-gap: 5%;
+    }
+    
+}
+
+
+@media screen and (max-width: 767px) {
+    .container{
+        max-width: 90%;
+    }
+
+    header .container{
+        flex-wrap: nowrap;
+    }
+
+    .itensMenu li a{
+        margin: 6px 8px;
+    }
+
+    #sobre{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    h2{
+        padding: 24px 0;
+        margin: 16px 0;
+    }
+
+    .sobreTexto{
+        padding-left: 0;
+    }
+
+    .itens{
+        display: flex;
+        flex-direction: column;
+    }
+}
